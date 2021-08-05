@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>Submit Books</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Miniver&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="addBook.css" rel="stylesheet">
+    <script type="text/javascript"></script>
+    <script src="addBook.js">
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Book Network</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="recently_added.html">Book Collection</a></li>
+                    <li><a href="addBook.html">Add Books</a></li>
+                    <li><a onclick="logOut();" href="#">Log Out</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="testbox">
+        <form>
+            <div class="banner">
+                <h1 class="header">Add Prescription To Library</h1>
+            </div>
+            <br/>
+            <fieldset>
+                <legend>Information About The Prescription</legend>
+                <div class="colums">
+                    <div class="item">
+                        <label for="bTitle">Patient's Name<span>*</span></label>
+                        <input id="i-book-name" type="text" name="Title" />
+                    </div>
+                    <div class="item">
+                        <label for="bAuthor">Doctor's Name <span>*</span></label>
+                        <input id="i-author" type="text" name="Author" />
+                    </div>
+                    <div class="item">
+                        <label for="bGenre">Prescription Link <span>*</span></label>
+                    </div>
+
+                  <script type="text/javascript" src="js/filereader.js"></script>
+                        <script type="text/javascript" src="js/qrcodelib.js"></script>
+                        <script type="text/javascript" src="js/webcodecamjs.js"></script>
+                        <script type="text/javascript">
+                            var txt = "innerText" in HTMLElement.prototype ? "innerText" : "textContent";
+                            var arg = {
+                                resultFunction: function(result) {
+                                    var aChild = document.createElement('li');
+                                    aChild[txt] = result.format + ': ' + result.code;
+                                    document.querySelector('body').appendChild(aChild);
+                                }
+                            };
+                            var decoder = new WebCodeCamJS("canvas").init(arg);
+
+                            function decodeLocalImage() {
+                                decoder.decodeLocalImage();
+                            }
+                        </script>
+                    </div>
+                    
+
+
+            </fieldset>
+            
+</body>
+
+</html>
+
+</html>
